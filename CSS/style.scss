@@ -1,0 +1,168 @@
+@mixin display{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+@mixin check1 {
+    content:"\2611";
+    color:green;
+    margin-right: .5vw;
+    border-radius: .5vw;
+}
+@mixin check2 {
+    content:"\2297";
+    color: red;
+    margin-right: .5vw;
+}
+body {
+    @include display;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+.nav {
+    @include display;
+    width: 80vw;
+    height: 10vh;
+    margin-bottom: 10vh;
+    font-size: 6vh;
+    font-weight: lighter;
+    
+    
+}
+.money {
+    font-weight: bold;
+    font-size: 7vh;
+}
+.mon {
+    color: rgb(228, 214, 214);
+}
+
+.container {
+    width: 80vw;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .box {
+        @include display;
+        width: 20vw;
+        box-shadow: 0 0 2vw rgb(177, 176, 176);
+        flex-direction: column;
+        justify-content: space-around;
+        .plan-head {
+         text-transform: uppercase;
+         font-weight: unset;
+        }
+    }
+}
+
+
+
+
+
+.list1{
+    list-style: none;
+    .item {
+        display: flex;
+        margin-bottom: 2vh;
+        color: rgb(156, 156, 156);
+        font-size: 2.2vh;
+        &:first-child::before {
+            @include check1;
+        }
+            &:nth-child(2)::before {
+               @include check1;
+            }
+            &:nth-child(3)::before {
+                @include check2;
+            }
+            &:last-child::before {
+                @include check2;
+            }
+        }  
+}
+
+.list2{
+    list-style: none;
+    .item {
+        display: flex;
+        margin-bottom: 2vh;
+        color: rgb(156, 156, 156);
+        font-size: 2.2vh;
+        &:first-child::before {
+            @include check1;
+        }
+            &:nth-child(2)::before {
+               @include check1;
+            }
+            &:nth-child(3)::before {
+                @include check1;
+            }
+            &:last-child::before {
+                @include check2;
+            }
+        }  
+}
+
+.list3{
+    list-style: none;
+    .item {
+        display: flex;
+        margin-bottom: 2vh;
+        color: rgb(156, 156, 156);
+        font-size: 2.2vh;
+        &:first-child::before {
+               @include check1;
+        }
+            &:nth-child(2)::before {
+               @include check1;
+            }
+            &:nth-child(3)::before {
+                @include check1;
+            }
+            &:last-child::before {
+                @include check1;
+            }
+        }  
+}
+
+.footer {
+    @include display;
+    width: 80vw;
+    height: 35vh;
+    flex-direction: column;
+.footer-p {
+    @include display;
+    color: rgb(156, 156, 156);
+    width: 50vw;
+    text-align: center;
+    font-size: 2.2vh;
+}
+    .line {
+        display: inline-block;
+        background: rgb(199, 198, 198);
+        width: 10vw;
+        height: .2vh;
+    }
+    input.button {
+        display: inline-block;
+        margin: 5vh 1vw 0 1vw;
+        width: 10vw;
+        height: 5vh;
+        color: white;
+        font-size: 2.2vh;
+        border: none;
+        outline: none;
+        border-radius: 520vh;
+        background: rgb(4, 99, 241);
+       
+    }
+    input.button:hover {
+        color: #ffff00;
+        background: #000;
+        border: 1px solid #fff;
+        }
+    
+}
